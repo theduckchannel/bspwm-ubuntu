@@ -150,6 +150,8 @@ def installDotFiles():
     os.system(f'cp -rf {os.getcwd()}/dotfiles/.xs* /home/{username}/')
     os.system(f'cp -rf {os.getcwd()}/dotfiles/.fe* /home/{username}/')
     os.system(f'cp -rf {os.getcwd()}/dotfiles/.vimrc /home/{username}/')
+    cmd('cp -rf dotfiles/.oh-my-bash ~/')
+    cmd('cp -rf dotfiles/.bashrc ~/')
     pause()
 
 
