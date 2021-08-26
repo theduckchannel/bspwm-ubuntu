@@ -184,10 +184,8 @@ def installNerdFont():
     cprint('\r\n:: Installl Nerd Font...', fg='y', style='b')
     pause(2)
     cmd('mkdir -p ~/.local/share/fonts')
-    cmd('unzip ')
-    #unzip -o FiraCode.zip
-    cmd('wget -O FiraCode.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"')
-    cmd('unzip -o FiraCode.zip ~/.local/share/fonts')
+    cmd('wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"')
+    cmd('unzip -o -d ~/.local/share/fonts/ FiraCode.zip')
     cmd('fc-cache -fv')
     cmd('rm -rf FiraCode.zip')
     pause()
