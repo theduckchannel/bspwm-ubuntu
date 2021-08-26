@@ -182,14 +182,14 @@ def installOhMyBash():
 
 
 def main():
-    #showWelcomeScreen()
-    #updateAndUpgrade()
-    #installRegularPackages()
-    #installNonRegularPackages()
-    #installDotFiles()
-    #polyBarConfig()
+    showWelcomeScreen()
+    updateAndUpgrade()
+    installRegularPackages()
+    installNonRegularPackages()
+    installDotFiles()
+    polyBarConfig()
     installOhMyBash()
-    #showFinalMessage()
+    showFinalMessage()
     
 
 if __name__ == "__main__":
