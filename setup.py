@@ -184,21 +184,25 @@ def installNerdFont():
     cprint('\r\n:: Installl Nerd Font...', fg='y', style='b')
     pause(2)
     cmd('mkdir -p ~/.local/share/fonts')
-    cmd('yes | cp fonts/* ~/.local/share/fonts')
+    cmd('unzip ')
+    #unzip -o FiraCode.zip
+    cmd('wget -O FiraCode.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"')
+    cmd('unzip -o FiraCode.zip ~/.local/share/fonts')
     cmd('fc-cache -fv')
+    cmd('rm -rf FiraCode.zip')
     pause()
 
 
 def main():
-    showWelcomeScreen()
-    updateAndUpgrade()
-    installRegularPackages()
-    installNonRegularPackages()
-    installDotFiles()
-    polyBarConfig()
-    installOhMyBash()
+    #showWelcomeScreen()
+    #updateAndUpgrade()
+    #installRegularPackages()
+    #installNonRegularPackages()
+    #installDotFiles()
+    #polyBarConfig()
+    #installOhMyBash()
     installNerdFont()
-    showFinalMessage()
+    #showFinalMessage()
     
 
 if __name__ == "__main__":
