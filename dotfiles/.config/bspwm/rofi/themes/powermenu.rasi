@@ -1,5 +1,5 @@
 configuration {
-    font:                           "Iosevka 10";
+    font:                           "Roboto 10";
     show-icons:                     false;
     display-drun: 					":";
     drun-display-format:            "{name}";
@@ -40,7 +40,7 @@ textbox-prompt-colon {
     background-color:               @background;
     text-color:                     @urgent;
     padding:                        5px 0px 0px 6px;
-	font:							"feather 10";
+	font:							"Roboto 10";
 }
 
 inputbar {
@@ -96,7 +96,7 @@ element {
     background-color:               @background;
     text-color:                     @foreground;
     orientation:                    horizontal;
-	font:							"feather 10";
+	font:							"Roboto 10";
 	border:							1px;
     border-radius:                  0px;
     border-color:					@selected;
@@ -109,7 +109,7 @@ element-icon {
 }
 
 element-text {
-	font:							"feather 12";
+	font:							"Roboto 12";
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0;

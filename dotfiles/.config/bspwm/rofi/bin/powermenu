@@ -7,7 +7,7 @@ rofi_command="rofi -theme $DIR/rofi/themes/powermenu.rasi"
 uptime=$(uptime -p | sed -e 's/up //g')
 
 # Options
-shutdown=""
+shutdown=""
 reboot=""
 lock=""
 suspend=""
@@ -22,21 +22,13 @@ case $chosen in
     $shutdown)
 		ans=$($HOME/.config/bspwm/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-        systemctl poweroff
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-        exit
-        else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        poweroff
         fi
         ;;
     $reboot)
 		ans=$($HOME/.config/bspwm/rofi/bin/confirm)
 		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
-        systemctl reboot
-		elif [[ $ans == "no" ]] || [[ $ans == "NO" ]] || [[ $ans == "n" ]]; then
-        exit
-        else
-        rofi -theme ~/.config/bspwm/rofi/themes/askpass.rasi -e "$_msg"
+        reboot
         fi
         ;;
     $lock)
