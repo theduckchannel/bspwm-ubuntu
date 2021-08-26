@@ -128,27 +128,13 @@ def installRegularPackages():
 def installNonRegularPackages():
     cprint('\r\n:: Install Non Regular Packages...', fg='y', style='b')
     pause(2)
-    # alacritty
-    cmd('sudo add-apt-repository -y ppa:aslatter/ppa')
-    cmd('sudo apt install --assume-yes alacritty')
-    cprint('\r\n:: Install Nerd Fonts...', fg='g', style='b')
-    cmd('mkdir -p ~/.local/share/fonts')
-    fonts = ['Iosevka','Meslo']
-    for font in fonts:
-        cmd(f'wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/{font}.zip')
-        cmd(f'unzip {font}.zip -d ~/.local/share/fonts/')
-        cmd(f'rm -f {font}.zip')
-
-
     cmd('fc-cache -fv')
-
     cprint('\r\n:: Install i3lock-color...', fg='g', style='b')
     cmd('git clone https://github.com/Raymo111/i3lock-color.git')
     cmd('cd i3lock-color')
     cmd('sudo ./install-i3lock-color.sh')
     cmd('cd ../')
     cmd('sudo rm -rf i3lock-color')
-
 
     pause()
 
