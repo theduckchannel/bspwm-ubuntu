@@ -132,8 +132,9 @@ def installNonRegularPackages():
     cprint('\r\n:: Install i3lock-color...', fg='g', style='b')
     cmd('git clone https://github.com/Raymo111/i3lock-color.git')
     cmd('cd i3lock-color')
+    os.chdir('i3lock-color/')
     cmd('sudo ./install-i3lock-color.sh')
-    cmd('cd ../')
+    os.chdir('../')
     cmd('sudo rm -rf i3lock-color')
 
     pause()
