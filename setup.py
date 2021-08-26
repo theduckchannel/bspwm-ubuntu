@@ -175,21 +175,21 @@ def polyBarConfig():
 def installOhMyBash():
     cprint('\r\n:: Installl oh-my-bash...', fg='y', style='b')
     pause(2)
-    os.system('bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"')
+    cmd('cp -rf dotfiles/.oh-my-bash/ ~/')
     cmd('cp -rf dotfiles/.bashrc ~/')
     pause()
 
 
 
 def main():
-    showWelcomeScreen()
-    updateAndUpgrade()
-    installRegularPackages()
-    installNonRegularPackages()
-    installDotFiles()
-    polyBarConfig()
+    #showWelcomeScreen()
+    #updateAndUpgrade()
+    #installRegularPackages()
+    #installNonRegularPackages()
+    #installDotFiles()
+    #polyBarConfig()
     installOhMyBash()
-    showFinalMessage()
+    #showFinalMessage()
     
 
 if __name__ == "__main__":
