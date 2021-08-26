@@ -192,15 +192,15 @@ def installNerdFont():
 
 
 def main():
-    #showWelcomeScreen()
-    #updateAndUpgrade()
-    #installRegularPackages()
-    #installNonRegularPackages()
-    #installDotFiles()
-    #polyBarConfig()
-    #installOhMyBash()
+    showWelcomeScreen()
+    updateAndUpgrade()
+    installRegularPackages()
+    installNonRegularPackages()
+    installDotFiles()
+    polyBarConfig()
+    installOhMyBash()
     installNerdFont()
-    #showFinalMessage()
+    showFinalMessage()
     
 
 if __name__ == "__main__":
