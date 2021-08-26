@@ -145,12 +145,12 @@ def installDotFiles():
     cprint('\r\n:: Installing dotfiles...', fg='y', style='b')
     if(not os.path.isdir(f'/home/{username}/.config')):
         os.mkdir(f'/home/{username}/.config')
-    
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.config/* /home/{username}/.config')
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.Xre* /home/{username}/')
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.xs* /home/{username}/')
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.fe* /home/{username}/')
-    os.system(f'cp -rf {os.getcwd()}/dotfiles/.vimrc /home/{username}/')
+    #yes | cp fonts/* ~/.local/share/fonts
+    os.system(f'yes |  cp -rf {os.getcwd()}/dotfiles/.config/* /home/{username}/.config')
+    os.system(f'yes | cp -rf {os.getcwd()}/dotfiles/.Xre* /home/{username}/')
+    os.system(f'yes | cp -rf {os.getcwd()}/dotfiles/.xs* /home/{username}/')
+    os.system(f'yes | cp -rf {os.getcwd()}/dotfiles/.fe* /home/{username}/')
+    os.system(f'yes | cp -rf {os.getcwd()}/dotfiles/.vimrc /home/{username}/')
     pause()
 
 
@@ -175,10 +175,18 @@ def polyBarConfig():
 def installOhMyBash():
     cprint('\r\n:: Installl oh-my-bash...', fg='y', style='b')
     pause(2)
-    cmd('cp -rf dotfiles/.oh-my-bash/ ~/')
-    cmd('cp -rf dotfiles/.bashrc ~/')
+    cmd('yes | cp -rf dotfiles/.oh-my-bash/ ~/')
+    cmd('yes | cp -rf dotfiles/.bashrc ~/')
     pause()
 
+
+def installNerdFont():
+    cprint('\r\n:: Installl Nerd Font...', fg='y', style='b')
+    pause(2)
+    cmd('mkdir -p ~/.local/share/fonts')
+    cmd('yes | cp fonts/* ~/.local/share/fonts')
+    cmd('fc-cache -fv')
+    pause()
 
 
 def main():
@@ -189,6 +197,7 @@ def main():
     installDotFiles()
     polyBarConfig()
     installOhMyBash()
+    installNerdFont()
     showFinalMessage()
     
 
