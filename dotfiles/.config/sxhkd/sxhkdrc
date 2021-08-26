@@ -19,8 +19,12 @@ super + n
 	nmd
 
 # Rofi Menus
-super + {w,m,x,r}
-	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot}
+
+super + x
+    ~/.config/bspwm/rofi/bin/powermenu
+
+super + {w,m,r}
+	sh ~/.config/bspwm/rofi/bin/{windows,mpd,asroot}
 
 ctrl + alt + {s,n,t}
 	sh ~/.config/bspwm/rofi/bin/{screenshot,network,themes}
