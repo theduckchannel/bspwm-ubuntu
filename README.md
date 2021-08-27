@@ -23,9 +23,8 @@ Hi all, this is repository for install one light bspwm environment.
 
 You need clone this repository:
 ```console
-$ git clone https://github.com/theduckchannel/duckchannel-style-bspwm.git
-$ cd duckchannel-style-bspwm
-$ chmod +x setup.sh 
+$ git clone https://github.com/theduckchannel/bspwm-ubuntu.git
+$ cd bspwm-ubuntu
 $ ./setup.py
 ```
 
