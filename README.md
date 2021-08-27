@@ -1,4 +1,4 @@
-![screenshot](/images/screenshot.jpg "The Duck Channel´s bspwm style screenshot")
+![screenshot](/images/screenshot.png "The Duck Channel´s Ubuntu 21.04 bspwm style screenshot")
 
 Table of Contents
 =================
@@ -12,12 +12,12 @@ Table of Contents
 
 # The Duck Channel Style bspwm
 
-Hi all, this is repository for install one light bspwm environment. 
+Hi all, this is repository for install one light bspwm environment on Ubuntu 21.04. 
 
 ## Requirements
 
-1. Arch Linux Installed with xorg
-2. lxdm Display Manager installed and enabled
+1. Ubuntu 21.04 Installed
+2. git
 
 ## How to Install
 
