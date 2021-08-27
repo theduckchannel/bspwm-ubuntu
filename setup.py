@@ -98,22 +98,6 @@ def showWelcomeScreen():
     pause()
 
  
-
-def installLxdm(): 
-    cprint('\r\n\r\n:: Installing Lxdm...', fg='y', style='b') 
-    # install and enable lxdm   
-    os.system('sudo pacman --noconfirm -S lxdm')
-    os.system('sudo systemctl enable lxdm')
-    # Copy lxdm.conf to local copy
-    os.system('cp /etc/lxdm/lxdm.conf .')
-    os.system(f'sed -i "s/# autologin=dgod/autologin={username}/" lxdm.conf')
-    os.system('sed -i "s/# numlock=0/numlock=1/" lxdm.conf')
-    os.system('sed -i "s/# session=\/usr\/bin\/startlxde/session=\/usr\/bin\/bspwm/" lxdm.conf')
-    os.system('sudo cp -f lxdm.conf /etc/lxdm/lxdm.conf')
-    os.system('rm lxdm.conf')
-    pause()
-    
-
 def installRegularPackages():
     cprint('\r\n:: Installing Regular packages...', fg='y', style='b')
     pause(2)
